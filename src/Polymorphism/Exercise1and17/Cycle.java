@@ -1,4 +1,4 @@
-package Polymorphism.Exercise1;
+package Polymorphism.Exercise1and17;
 
 public class Cycle {
     public void ride(){
@@ -15,20 +15,22 @@ public class Cycle {
     }
 
     public static void main(String[] args) {
-      /*  Cycle c = new Cycle();
+        //Cycle c = new Cycle();
         Unicycle u = new Unicycle();
         Bicycle b = new Bicycle();
         Tricycle t = new Tricycle();
-        checkriding(c);
-        checkriding(b);
-        checkriding(t);
-        checkriding(u);*/
-      checkriding(new Unicycle());
+        Cycle[] cycles = {u,b,t};
+        ((Unicycle)cycles[0]).balance();
+        ((Bicycle)cycles[1]).balance();
+        cycles[2].ride();
+        //checkriding(c);
+        //checkriding(b);
+        //checkriding(t);
+        //checkriding(u);
+      /*checkriding(new Unicycle());
       checkriding(new Cycle());
       checkriding(new Bicycle());
-      checkriding(new Tricycle());
-
-      Cycle c= new Cycle();
+      checkriding(new Tricycle());*/
     }
 }
 

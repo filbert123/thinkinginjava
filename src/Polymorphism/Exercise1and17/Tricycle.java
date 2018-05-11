@@ -1,4 +1,4 @@
-package Polymorphism.Exercise1;
+package Polymorphism.Exercise1and17;
 
 public class Tricycle extends Cycle {
     public void ride(){
