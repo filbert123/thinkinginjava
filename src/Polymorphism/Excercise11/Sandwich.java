@@ -21,7 +21,7 @@ class Lunch extends Meal {
 class PortableLunch extends Lunch {
     PortableLunch() { System.out.println("PortableLunch()");}
 }
-public class Sandwich extends PortableLunch {
+public class Sandwich extends PortableLunch implements FastFood {
     private Bread b = new Bread();
     private Cheese c = new Cheese();
     private Pickle p = new Pickle();
@@ -29,6 +29,24 @@ public class Sandwich extends PortableLunch {
     private Bread b2 = new Bread();
     public Sandwich() { System.out.println("Sandwich()"); }
     public static void main(String[] args) {
-        new Sandwich();
+       Sandwich sandwich = new Sandwich();
+       sandwich.eat();
+       sandwich.fasteat();
+       sandwich.mmm();
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating sandwich");
+    }
+
+    @Override
+    public void fasteat() {
+        System.out.println("Fast Eating sandwich");
+    }
+
+    @Override
+    public void mmm() {
+        System.out.println("Mmm, so delicious");
     }
 }
